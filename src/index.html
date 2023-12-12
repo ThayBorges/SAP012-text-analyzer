@@ -5,10 +5,38 @@
   <meta charset="utf-8">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
+  <title>Analisador de Texto</title>
 </head>
 
 <body>
-  Olá mundo
   <script src="index.js" type="module"></script>
+  
+  <header>
+    <h1>Analisador de Texto</h1>
+  </header>
+
+  <ul>
+    <li data-testid="word-count">Métrica 1 - Contagem de Palavras</li>
+    <li data-testid="character-count">Métrica 2 - Contagem de Caracteres</li>
+    <li data-testid="character-no-spaces-count">Métrica 3 - Contagem de Caracteres (sem espaços)</li>
+    <li data-testid="number-count">Métrica 4 - Contagem de Números</li>
+    <li data-testid="number-sum">Métrica 5 - Soma Total de Números</li>
+    <li data-testid="word-length-average">Métrica 6 - Comprimento Médio das Palavras</li>
+  </ul>
+
+  <form>
+    <label for="user-input">Digite seu texto:</label>
+    <textarea name="user-input"></textarea>
+    
+  </form>
+
+  <button id="reset-button">Limpar Conteúdo</button>
+
+  <footer>
+    <p>Desenvolvido por: Thaysa Borges</p>
+    
+  </footer>
+
+
 </body>
 </html>
