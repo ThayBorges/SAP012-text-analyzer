@@ -1,42 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
-  <title>Analizador de texto</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
   <link rel="stylesheet" href="style.css" />
-  <title>Analisador de Texto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+  <title>Analizador de Texto</title>
+
 </head>
 
 <body>
+
+  <div id="container">
+  
   <script src="index.js" type="module"></script>
   
-  <header>
-    <h1>Analisador de Texto</h1>
-  </header>
+  
+    <div id="Cabecalho">
+      
+      <header>
+        <h1>Analisador de Texto</h1>
+      </header>
+    </div>
 
-  <ul>
-    <li class="item" data-testid="word-count">Contagem de Palavras</li>
-    <li class="item" data-testid="character-count">Contagem de Caracteres</li>
-    <li class="item" data-testid="character-no-spaces-count">Contagem de Caracteres (sem espaços)</li>
-    <li class="item" data-testid="number-count">Contagem de Números</li>
-    <li class="item" data-testid="number-sum">Soma Total de Números</li>
-    <li class="item" data-testid="word-length-average">Comprimento Médio das Palavras</li>
-  </ul>
+    <div id="metricas">
+      <ul>
+        <li class="item" data-testid="word-count">Contagem de Palavras: <span id="wordCount"></span></li>
+        <li class="item" data-testid="character-count">Contagem de Caracteres: <span id="caracterCount"></span></li>
+        <li class="item" data-testid="character-no-spaces-count">Contagem de Caracteres (sem espaços): <span id="caracterNoSpaceCount"></span></li>
+        <li class="item" data-testid="number-count">Contagem de Números: <span id="numberCount"></span></li>
+        <li class="item" data-testid="number-sum">Soma Total de Números: <span id="numberSum"></span></li>
+        <li class="item" data-testid="word-length-average">Comprimento Médio das Palavras: <span id="wordLengthAverage"></span></li>
+      </ul>
 
-  <form>
-    <label for="user-input">Digite seu texto:</label>
-    <textarea name="user-input"></textarea>
+    </div>
 
-  </form>
+    <div id="caixadetexto">
+      <textarea name="user-input" placeholder="Digite seu texto:" id="userInput"></textarea>
 
-  <button id="reset-button">Limpar Conteúdo</button>
+    </div>
 
-  <footer>
-    <p>Desenvolvido por: Thaysa Borges</p>
-    
-  </footer>
+    <div id="button-container">
+
+      <button id="btn" name="reset-button">Limpar Conteúdo</button>
+      <button id="btn" name="copiarTexto">Copiar Texto</button>
+
+    </div>
+
+   
+    <div id="social-links">
+
+      <a href="https://github.com/ThayBorges" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+
+      <a href="https://www.linkedin.com/in/thaysaborges/" target="_blank">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+
+      <a href="https://www.instagram.com/t__borges/" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>      
+
+    </div>
+
+    <footer>
+      <div id="creditos">
+        
+        <p>Feito com ♥ por Thaysa Borges</p>
+      
+      </div>
+      
+    </footer>
 
 
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  
 </body>
 </html>

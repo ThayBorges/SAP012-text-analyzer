@@ -1,71 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    background-image:url(./Assets/bg-desktop.jpg) ;
+
+}
+
+
+body * {
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
 header {
+    font-family: 'Rubik Doodle Shadow';font-size: 22px;
+
+}
+
+#container {
+    width: 500px;
+    height: 712px;
+    margin: auto;
+    
+}
+
+#Cabecalho {
+    
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a237e;
-    font-weight: bold;
+    margin: 10px 0px;
+    
+    
 }
 
-/* Estilos para o footer */
-footer {
-    position: absolute;
-    bottom: 0;
-    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
-    color: #1a237e;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Estilos para a lista não ordenada */
 ul {
-    list-style-type: none; /* Remove os marcadores da lista */
-    display: flex; /* Torna a lista um contêiner flexível */
-    padding: 0; /* Remove o preenchimento padrão da lista */
-    color: #1a237e;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Estilos para cada caixa (li) */
-li {
-    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
-    flex: 1; /* Faz com que as caixas ocupem todo o espaço disponível */
-    margin: 5px; /* Adiciona uma margem entre as caixas */
-    padding: 10px; /* Adiciona preenchimento interno */
-    border: 2px solid #1a237e; /* Adiciona uma borda azul escuro */
-    background-color: #c5cae9; /* Adiciona um fundo azul claro */
-    text-align: center; /* Centraliza o texto dentro da caixa */
-    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    display: flex;
     font-size: 12px;
+    text-align: center;
+    gap: 8px;
+    justify-content: space-between;
+    
+    
+    
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: #1a237e;
-    font-weight: bold;
+.item {
+    border: 1px solid rgba(255, 255, 255, 0.5 );
+    background: rgba(255, 255, 255, 0.1 );
+    border-radius: 8px;   
+    
 }
 
-textarea {
-    display: block;
-    width: 70%; /* Ajuste conforme necessário */
-    margin: 0 auto;
-    padding: 10px;
-    border: 2px solid #1a237e; /* Cor azul escuro para a borda */
-    background-color: #c5cae9; /* Cor azul claro para o fundo */
-    resize: none; /* Impede o redimensionamento do textarea pelo usuário */
+
+#metricas {
+    
+    list-style: none;
+    display: flex;
+    align-items: center;   
+    margin: 20px 0px;
+    
+
 }
 
-#reset-button {
-    display: block;
-    margin: 20px auto; /* Centraliza o botão horizontalmente com uma margem superior de 20 pixels */
-    padding: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff; /* Cor branca para o texto */
-    background-color: #1a237e; /* Cor azul escuro para o fundo */
-    border: 2px solid #1a237e; /* Cor azul escuro para a borda */
-    border-radius: 5px; /* Borda levemente arredondada */
-    cursor: pointer; /* Indica que o cursor do mouse deve mudar ao passar sobre o botão */
-    font-weight: bold;
+
+textarea[name="user-input"] {
+    background: rgba(255, 255, 255, 0.1 );
+    justify-content: center;
+    font-size: 14px;
+    width: 450px;
+    height: 150px;
+    color: white;
+    border-radius: 5px;
+    border-color: white;
+  }
+
+::-webkit-input-placeholder {
+    color: white;
+ }
+
+#caixadetexto {
+    
+    display: flex;
+    justify-content: center;
+    
+    
 }
+
+button:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.5 );
+
+}
+
+#btn {
+    border: 1px solid rgba(255, 255, 255, 0.5 );
+    background: rgba(255, 255, 255, 0.1 );
+    border-radius: 8px;
+    padding: 16px 16px;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+#button-container {
+    
+    text-align: center;
+    padding: 20px 0 40px 0;
+
+}
+
+#social-links {
+   
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 24px;
+    
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2;
+}
+
+#social-links a:hover {
+    background: rgba(255, 255, 255, 0.2 );
+    border-radius: 50%;
+
+        
+}
+
+footer {
+    
+    text-align: center;
+}
+
