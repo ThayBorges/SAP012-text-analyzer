@@ -62,7 +62,6 @@ ul {
     align-items: center;   
     margin: 20px 0px;
     
-
 }
 
 
@@ -95,7 +94,17 @@ button:hover {
 
 }
 
-#btn {
+#btn-clear {
+    border: 1px solid rgba(255, 255, 255, 0.5 );
+    background: rgba(255, 255, 255, 0.1 );
+    border-radius: 8px;
+    padding: 16px 16px;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+#btn-copy {
     border: 1px solid rgba(255, 255, 255, 0.5 );
     background: rgba(255, 255, 255, 0.1 );
     border-radius: 8px;

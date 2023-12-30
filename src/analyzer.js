@@ -24,26 +24,29 @@ const analyzer = {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberCount: (text) => {
-    // Converte a string para um array de caracteres
-  const caracteres = text.split("");
-
-    // Inicializa o contador
-  let numeros = 0;
-
-  // Percorre o array de caracteres
-  for (const caractere of caracteres) {
-    // Verifica se o caractere é um número
-    if (/\d/.test(caractere) && caractere !== "0") {
-      // Incrementa o contador
-      numeros++;
-    }
-  }
-
-  // Retorna o número de números
-  return numeros; 
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    // replace substitui o caracter de acordo com o regex informado(extrai somente numeros e pontos).
+    const numberCount = text.replace(/\D/gim, '');
+    //retorna a quantidade de numeros digitados
+    return numberCount.length
+    
   },
+
+    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+  
   getNumberSum: (text) => {
+    const numberCount = text.replace(/\D/gim, '');
+
+    const split = numberCount.split('');
+
+    let resultado = 0;
+
+    for (let i = 0; i < split.length; i++) {
+      const valor = split[i];
+
+      resultado = resultado + parseFloat(valor);
+    }
+
+    return resultado;
     
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   },
