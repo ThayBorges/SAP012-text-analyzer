@@ -111,7 +111,7 @@ button:hover {
 }
 
  
-#btn-clear {
+#reset-button {
     border: 1px solid rgba(255, 255, 255, 0.5 );
     background: rgba(255, 255, 255, 0.1 );
     border-radius: 8px;
@@ -121,7 +121,7 @@ button:hover {
     cursor: pointer;
 }
 
-#btn-clear:before {
+#reset-button:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
@@ -138,19 +138,19 @@ button:hover {
   border-radius: 10px;
 }
 
-#btn-clear:active {
+#reset-button:active {
   color: #000
 }
 
-#btn-clear:active:after {
+#reset-button:active:after {
   background: transparent;
 }
 
-#btn-clear:hover:before {
+#reset-button:hover:before {
   opacity: 1;
 }
 
-#btn-clear:after {
+#reset-button:after {
   z-index: -1;
   content: '';
   position: absolute;

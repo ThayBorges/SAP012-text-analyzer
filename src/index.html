@@ -32,12 +32,12 @@
 
     <div id="metricas">
       <ul>
-        <li  class="item" >Contagem de Palavras: </li>
-        <li  class="item" >Contagem de Caracteres: </li>
-        <li  class="item" >Contagem de Caracteres (sem espaços): <br /> </li>
-        <li  class="item" >Contagem de Números: </li>
-        <li  class="item" >Soma Total de Números: </li>
-        <li  class="item" >Comprimento Médio das Palavras: </li>
+        <li  class="item" data-testid="character-count" >Contagem de Palavras: </li>
+        <li  class="item" data-testid="character-no-spaces-count">Contagem de Caracteres: </li>
+        <li  class="item" data-testid="word-count">Contagem de Caracteres (sem espaços): </li>
+        <li  class="item" data-testid="number-count">Contagem de Números: </li>
+        <li  class="item" data-testid="number-sum">Soma Total de Números: </li>
+        <li  class="item" data-testid="word-length-average">Comprimento Médio das Palavras: </li>
       </ul>
 
     </div>
@@ -49,7 +49,7 @@
 
     <div id="button-container">
 
-      <button id="btn-clear" name="reset-button">Limpar Conteúdo</button>
+      <button id="reset-button" name="reset-button">Limpar Conteúdo</button>
       <button id="btn-copy" name="copiarTexto">Copiar Texto</button>
 
     </div>

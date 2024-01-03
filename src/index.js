@@ -12,7 +12,7 @@ const numberSum = document.querySelector("li.item:nth-of-type(5)");
 const wordLengthAverage = document.querySelector("li.item:nth-of-type(6)");
 
 const btnCopy = document.querySelector("#btn-copy");
-const btnClear = document.getElementById("btn-clear");
+const btnClear = document.getElementById("reset-button");
 
 userInput.addEventListener("input", function () {
   const text = userInput.value;
