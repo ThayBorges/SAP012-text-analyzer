@@ -10,7 +10,7 @@ const analyzer = {
   },
   getCharacterCountExcludingSpaces: (text) => {
     
-    const spacesRemoved = text.replace(/\s/g, "");
+    const spacesRemoved = text.replace(/[\s,.:;!?><]/g, "");
     return spacesRemoved.length; 
     
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
@@ -20,33 +20,40 @@ const analyzer = {
     if (words.length === 0) return 0;
 
     const totalCharacters = words.join('').length;
-    return totalCharacters / words.length;
+    return parseFloat((totalCharacters / words.length).toFixed(2));
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberCount: (text) => {
     // replace substitui o caracter de acordo com o regex informado(extrai somente numeros e pontos).
-    const numberCount = text.replace(/\D/gim, '');
-    //retorna a quantidade de numeros digitados
-    return numberCount.length
-    
+    const numberCount = text.match(/\b\d+(?:\.\d+)?\b/g);
+    if(numberCount){
+      //retorna a quantidade de numeros digitados
+      return numberCount.length;
+    }
+    return 0;
   },
 
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+  //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   
   getNumberSum: (text) => {
-    const numberCount = text.replace(/\D/gim, '');
+    //const numberCount = text.replace(/\D/gim, '');
 
-    const split = numberCount.split('');
+    //const split = numberCount.split('');
+    const numberSum = text.match(/\b\d+(?:\.\d+)?\b/g);
+    if(numberSum){
+      //retorna a quantidade de numeros digitados
+      let resultado = 0;
 
-    let resultado = 0;
+      for (let i = 0; i < numberSum.length; i++) {
+        const valor = numberSum[i];
 
-    for (let i = 0; i < split.length; i++) {
-      const valor = split[i];
+        resultado = resultado + parseFloat(valor);
+      }
 
-      resultado = resultado + parseFloat(valor);
+      return resultado;
     }
-
-    return resultado;
+    return 0;
+    
     
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   },

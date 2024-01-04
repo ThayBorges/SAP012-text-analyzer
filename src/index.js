@@ -42,7 +42,6 @@ btnCopy.addEventListener("click", async function () {
     await navigator.clipboard.writeText(textToCopy);
     alert("Texto copiado para a área de transferência!");
   } catch (err) {
-    console.error("Erro ao copiar o texto:", err);
     alert("Falha ao copiar o texto.");
   }
 });
