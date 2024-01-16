@@ -1,6 +1,6 @@
 const analyzer = {  
   getWordCount: (text) => {
-    const words = text.trim().split(/\s+/).filter(word => word !== '');
+    const words = text.trim().split(" ").filter(word => word !== ''); //split permite dividir uma string em partes menores com base em um separador especificado 
     return words.length;
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
@@ -10,16 +10,16 @@ const analyzer = {
   },
   getCharacterCountExcludingSpaces: (text) => {
     
-    const spacesRemoved = text.replace(/[\s,.:;!?><]/g, "");
+    const spacesRemoved = text.replace(/[\s,.:;!?><]/g, ""); //O replace()método de Stringvalores retorna uma nova string com uma, algumas ou todas as correspondências de a patternsubstituídas por a replacement
     return spacesRemoved.length; 
     
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
   },
   getAverageWordLength: (text) => {    
-    const words = text.trim().split(/\s+/).filter(word => word !== '');
+    const words = text.trim().split(" ").filter(word => word !== '');
     if (words.length === 0) return 0;
 
-    const totalCharacters = words.join('').length;
+    const totalCharacters = words.join('').length; //join junta todos os elelentos de um array
     return parseFloat((totalCharacters / words.length).toFixed(2));
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
